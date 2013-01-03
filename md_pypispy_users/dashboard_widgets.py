@@ -19,6 +19,8 @@ class PypispyUsers(DashboardWidgetBase):
     sizex = 1
     sizey = 1
 
+    update_interval = 10800
+
     def get_context_data(self):
         ctx = super(PypispyUsers, self).get_context_data()
         try:

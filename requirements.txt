@@ -4,12 +4,13 @@
 # Packages essential to this app. Needed by anyone who wants to use this app.
 # ===========================================================================
 Django==1.4.3
-django-libs==0.11
+django-libs==0.13
 -e git+git://github.com/bitmazk/django-metrics-dashboard.git@12cc3b0a781ba0fca721a84dd80a0fd6d3dd1ad1#egg=metrics_dashboard
 django-load==1.0.0
 requests==0.14.2
 django-socketio==0.3.5
 South==0.7.6
+lockfile==0.9.1
 
 
 # ==============================================================

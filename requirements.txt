@@ -1,0 +1,22 @@
+# Install these requirements if you wish to contribute to this project.
+
+# ===========================================================================
+# Packages essential to this app. Needed by anyone who wants to use this app.
+# ===========================================================================
+Django==1.4.3
+django-libs==0.11
+-e git+git://github.com/bitmazk/django-metrics-dashboard.git@571b13a9f2bd8300bd288df4639a1d5d4101a4b3#egg=metrics_dashboard
+django-load==1.0.0
+requests==0.14.2
+django-socketio==0.3.5
+South==0.7.6
+
+
+# ==============================================================
+# Packages needed for running the tests. Needed by contributors.
+# ==============================================================
+factory_boy
+nose
+django-nose
+coverage
+django-coverage

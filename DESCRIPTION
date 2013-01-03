@@ -1,0 +1,2 @@
+A django-metrics-dashboard widget that displays the user counts of pypispy.com
+over time.

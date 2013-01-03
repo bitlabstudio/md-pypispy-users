@@ -5,6 +5,8 @@ DEBUG = True
 
 SITE_ID = 1
 
+SOCKETIO_HOST = 'socketio.example.com'
+SOCKETIO_PORT = 80
 DASHBOARD_REQUIRE_LOGIN = False
 DASHBOARD_MESSENGER_URL = 'http://example.com/'
 

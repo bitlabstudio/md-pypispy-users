@@ -1,8 +1,7 @@
 """Implementation of the ``md-pypispy-users`` widget."""
 import json
 
-from django.utils.timezone import datetime, now
-from django.utils.translation import ugettext_lazy as _
+from django.utils.timezone import now
 
 import requests
 
@@ -19,12 +18,6 @@ class PypispyUsers(DashboardWidgetBase):
 
     sizex = 1
     sizey = 1
-    time_format = '%d.%m.%Y %H:%M:%S'
-    settings = {
-        'LAST_UPDATE': {
-            'verbose_name': _('Last update'),
-        }
-    }
 
     def get_context_data(self):
         ctx = super(PypispyUsers, self).get_context_data()

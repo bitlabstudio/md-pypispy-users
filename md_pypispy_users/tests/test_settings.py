@@ -6,6 +6,7 @@ DEBUG = True
 SITE_ID = 1
 
 DASHBOARD_REQUIRE_LOGIN = False
+DASHBOARD_MESSENGER_URL = 'http://example.com/'
 
 PROJECT_ROOT = os.path.dirname(__file__)
 

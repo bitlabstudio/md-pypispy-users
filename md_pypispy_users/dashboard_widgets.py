@@ -28,7 +28,11 @@ class PypispyUsers(DashboardWidgetBase):
 
     def get_context_data(self):
         ctx = super(PypispyUsers, self).get_context_data()
-        user_count = UserCount.objects.all()[:1][0].value
+        try:
+            user_count = UserCount.objects.all().order_by(
+                'creation_date')[0].value
+        except IndexError:
+            user_count = "n/a"
         ctx.update({
             'user_count': user_count,
         })
@@ -41,7 +45,6 @@ class PypispyUsers(DashboardWidgetBase):
         user_count.creation_date = now()
         user_count.value = int(json.loads(resp.content))
         user_count.save()
-        self.save_setting('LAST_UPDATE', now())
         broadcast_channel(self.get_name(), 'update')
 
 

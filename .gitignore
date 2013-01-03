@@ -2,4 +2,5 @@
 *egg-info
 .ropeproject
 coverage/
+db.sqlite
 dist/

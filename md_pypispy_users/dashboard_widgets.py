@@ -25,7 +25,7 @@ class PypispyUsers(DashboardWidgetBase):
         ctx = super(PypispyUsers, self).get_context_data()
         try:
             user_count = UserCount.objects.all().order_by(
-                'creation_date')[0].value
+                '-creation_date')[0].value
         except IndexError:
             user_count = "n/a"
         ctx.update({
